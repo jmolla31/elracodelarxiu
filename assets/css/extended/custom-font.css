@@ -29,3 +29,15 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-title);
 }
+
+/* Typography improvements for brand identity */
+h1, h2, h3 {
+    letter-spacing: 0.02em;
+}
+
+/* Ensure proper font loading with fallbacks that work with brand colors */
+body {
+    font-feature-settings: "liga" 1, "kern" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

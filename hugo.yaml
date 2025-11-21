@@ -1,4 +1,4 @@
-baseURL: "https://examplesite.com/"
+baseURL: "https://elracodelarxiu.pages.dev"
 title: El Racó Del Arxiu
 theme: PaperMod
 
@@ -13,15 +13,15 @@ minify:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: ExampleSite
-  description: "ExampleSite description"
+  title: El Racó Del Arxiu
+  description: "El Racó Del Arxiu description"
   keywords: [Blog, Portfolio, PaperMod]
   author: Me
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
-  defaultTheme: auto # dark, light
-  disableThemeToggle: false
+  defaultTheme: dark # Force dark mode only
+  disableThemeToggle: true
 
   ShowReadingTime: true
   ShowShareButtons: true
@@ -70,16 +70,16 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "El Racó Del Arxiu \U0001F44B"
-    Content: Welcome to my blog
+    Title: "El Racó Del Arxiu"
+    Content: Blog associat a la Societat Unió Artística Musical D'Ontinyent
 
   socialIcons:
-    - name: x
-      url: "https://x.com/"
-    - name: stackoverflow
-      url: "https://stackoverflow.com"
-    - name: github
-      url: "https://github.com/"
+    - name: tiktok
+      url: "https://www.tiktok.com/@uamontinyent"
+    - name: instagram
+      url: "https://www.instagram.com/uamontinyent"
+    - name: youtube
+      url: "https://www.youtube.com/@uamontinyent"
 
   analytics:
     google:

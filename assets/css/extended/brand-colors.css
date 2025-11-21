@@ -1,0 +1,239 @@
+/* El Racó de l'Arxiu Brand Colors - Based on Corporate Manual */
+/* DARK MODE ONLY CONFIGURATION */
+
+:root {
+    /* Primary Brand Colors from Corporate Manual */
+    --brand-golden: #c6b300;      /* Daurat - Primary brand color for El Racó de l'Arxiu */
+    --brand-golden-dark: #a09200;  /* Darker golden for backgrounds */
+    --brand-golden-light: #e6d000; /* Lighter golden for highlights */
+    --brand-light-gray: #dfdfdf;  /* Gris clar - Light gray */
+    --brand-dark-gray: #1d1d1b;   /* Gris fosc - Dark gray */
+    
+    /* Dark theme configuration - ONLY THEME SUPPORTED */
+    --primary: var(--brand-golden);           /* Golden prominent in dark mode */
+    --secondary: var(--brand-light-gray);     /* Light gray for secondary in dark */
+    --tertiary: var(--brand-golden-dark);    /* Dark golden for subtle elements */
+    --content: var(--brand-light-gray);      /* Light text on dark */
+    --theme: var(--brand-dark-gray);         /* Dark background */
+    --entry: var(--brand-golden-dark);       /* Card backgrounds in dark golden */
+    --border: var(--brand-golden-light);     /* Light golden borders */
+    --code-bg: rgba(198, 179, 0, 0.15);     /* Golden tint for code */
+    --code-block-bg: var(--brand-golden-dark);
+    
+    /* Force dark color scheme */
+    color-scheme: dark;
+}
+
+/* Ensure dark theme is always applied */
+html {
+    color-scheme: dark;
+}
+
+body {
+    background: var(--theme);
+    color: var(--content);
+}
+
+/* Header styling with brand colors */
+.header {
+    background: var(--theme);
+    border-bottom: 2px solid var(--brand-golden);
+}
+
+.header .logo a {
+    color: var(--brand-golden);
+    font-weight: 700;
+}
+
+.header .logo a:hover {
+    color: var(--brand-golden-light);
+}
+
+/* Navigation menu */
+.header .menu a {
+    color: var(--content);
+}
+
+.header .menu a:hover {
+    color: var(--brand-golden);
+    background: rgba(198, 179, 0, 0.1);
+}
+
+/* Main content area */
+.main {
+    color: var(--content);
+}
+
+/* Page headers with golden accent */
+.page-header h1 {
+    color: var(--brand-golden);
+    border-bottom: 3px solid var(--brand-golden);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Post entries with subtle golden touches */
+.post-entry {
+    border-left: 4px solid var(--brand-golden);
+    padding-left: 1rem;
+    margin-left: -1rem;
+}
+
+.post-entry:hover {
+    border-left-color: var(--brand-golden-light);
+}
+
+.post-entry .entry-header h2 {
+    color: var(--content);
+}
+
+.post-entry .entry-header h2:hover {
+    color: var(--brand-golden);
+}
+
+/* Post metadata */
+.post-meta, .post-meta a {
+    color: var(--brand-golden-light);
+}
+
+.post-meta a:hover {
+    color: var(--brand-golden);
+}
+
+/* Buttons and interactive elements */
+.pagination a {
+    background: var(--brand-golden);
+    color: white;
+    border: 2px solid var(--brand-golden);
+}
+
+.pagination a:hover {
+    background: var(--brand-golden-dark);
+    border-color: var(--brand-golden-dark);
+}
+
+/* Links */
+a {
+    color: var(--brand-golden);
+}
+
+a:hover {
+    color: var(--brand-golden-light);
+}
+
+/* Code blocks with brand styling */
+pre {
+    background: var(--code-block-bg);
+    color: var(--brand-light-gray);
+    border-left: 4px solid var(--brand-golden);
+}
+
+code {
+    background: var(--code-bg);
+    color: var(--brand-light-gray);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+}
+
+/* Footer with brand colors */
+.footer {
+    border-top: 2px solid var(--brand-golden);
+    background: var(--theme);
+    color: var(--content);
+}
+
+/* Social icons with golden hover */
+.social-icons a:hover {
+    color: var(--brand-golden);
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+/* Search and forms */
+input[type="search"], input[type="text"] {
+    border: 2px solid var(--brand-light-gray);
+}
+
+input[type="search"]:focus, input[type="text"]:focus {
+    border-color: var(--brand-golden);
+    outline: none;
+    box-shadow: 0 0 5px rgba(198, 179, 0, 0.3);
+}
+
+/* Table styling */
+table {
+    border-collapse: collapse;
+}
+
+table th {
+    background: var(--brand-golden);
+    color: white;
+    padding: 0.8rem;
+}
+
+table td {
+    border: 1px solid var(--brand-golden-light);
+    padding: 0.6rem;
+    background: var(--entry);
+    color: var(--content);
+}
+
+table tr:nth-child(even) td {
+    background: rgba(198, 179, 0, 0.1);
+}
+
+/* Blockquotes with golden accent */
+blockquote {
+    border-left: 4px solid var(--brand-golden);
+    background: rgba(198, 179, 0, 0.1);
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    font-style: italic;
+}
+
+/* Archive and taxonomy pages */
+.archive-year {
+    color: var(--brand-golden);
+}
+
+.archive-month {
+    color: var(--brand-golden-light);
+}
+
+/* Tags and categories */
+.tag, .category {
+    background: var(--brand-golden-dark);
+    color: var(--brand-light-gray);
+    padding: 0.3rem 0.6rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    margin: 0.2rem;
+    display: inline-block;
+}
+
+.tag:hover, .category:hover {
+    background: var(--brand-golden);
+    color: white;
+}
+
+/* Breadcrumbs */
+.breadcrumbs a {
+    color: var(--brand-golden-light);
+}
+
+.breadcrumbs a:hover {
+    color: var(--brand-golden);
+}
+
+/* Profile mode adjustments if used */
+.profile .profile_inner h1 {
+    color: var(--brand-golden);
+}
+
+.profile .profile_inner .social-icons a {
+    color: var(--brand-golden-light);
+}
+
+.profile .profile_inner .social-icons a:hover {
+    color: var(--brand-golden);
+}
