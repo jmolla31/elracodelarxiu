@@ -1,6 +1,9 @@
+
 baseURL: "https://elracodelarxiu.pages.dev"
 title: El Racó Del Arxiu
 theme: PaperMod
+defaultContentLanguage: ca
+languageCode: ca
 
 enableRobotsTXT: true
 buildDrafts: false
@@ -19,7 +22,7 @@ params:
   author: Me
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
-  DateFormat: "January 2, 2006"
+  DateFormat: "2 January 2006"
   defaultTheme: dark # Force dark mode only
   disableThemeToggle: true
 
@@ -49,7 +52,7 @@ params:
     safari_pinned_tab: "<link / abs url>"
 
   label:
-    text: "Home"
+    text: "Inici"
     icon: /apple-touch-icon.png
     iconHeight: 35
 
@@ -113,17 +116,26 @@ params:
 menu:
   main:
     - identifier: categories
-      name: categories
+      name: Categories
       url: /categories/
       weight: 10
     - identifier: tags
-      name: tags
+      name: Tags
       url: /tags/
       weight: 20
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 25
     - identifier: example
       name: Web SUAMO
       url: https://www.suamontinyent.com/
       weight: 30
+# Add About page to menu
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 21
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
