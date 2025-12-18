@@ -48,6 +48,22 @@ h6:hover .anchor {
     display: none !important;
 }
 
+/* Center Instagram embeds */
+blockquote.instagram-media {
+    margin: 0 auto !important;
+}
+
+.instagram-media {
+    margin: 0 auto !important;
+}
+
+/* Center all embedded content containers */
+div[style*="text-align: center"] {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
 /* Header styling with brand colors */
 .header {
     background: var(--theme);

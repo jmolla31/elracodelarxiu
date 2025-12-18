@@ -21,4 +21,14 @@ Here's an example of how we can embed YouTube videos to share musical content an
 
 {{< youtube dQw4w9WgXcQ >}}
 
+## Social Media Integration
+
+We can also embed Instagram reels to showcase our archive work and musical discoveries:
+
+<div style="text-align: center;">
+
+{{< instagram CzQrUW7O8pv >}}
+
+</div>
+
 Feel free to explore and learn more about our work.
