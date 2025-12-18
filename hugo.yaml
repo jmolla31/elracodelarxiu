@@ -27,12 +27,12 @@ params:
   disableThemeToggle: true
 
   ShowReadingTime: false
-  ShowShareButtons: true
+  ShowShareButtons: false
   ShowPostNavLinks: true
   ShowBreadCrumbs: false
   ShowCodeCopyButtons: false
   ShowWordCount: false
-  ShowRssButtonInSectionTermList: true
+  ShowRssButtonInSectionTermList: false
   UseHugoToc: true
   disableSpecial1stPost: false
   disableScrollToTop: false
@@ -123,6 +123,10 @@ menu:
       name: Tags
       url: /tags/
       weight: 20
+    - identifier: història
+      name: Història
+      url: /tags/història/
+      weight: 15
     - identifier: posts
       name: Posts
       url: /posts/
