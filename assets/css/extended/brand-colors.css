@@ -34,6 +34,20 @@ body {
     color: var(--content);
 }
 
+/* Hide anchor links on headings */
+.anchor {
+    display: none !important;
+}
+
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+    display: none !important;
+}
+
 /* Header styling with brand colors */
 .header {
     background: var(--theme);

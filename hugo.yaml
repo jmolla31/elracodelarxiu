@@ -26,12 +26,12 @@ params:
   defaultTheme: dark # Force dark mode only
   disableThemeToggle: true
 
-  ShowReadingTime: true
+  ShowReadingTime: false
   ShowShareButtons: true
   ShowPostNavLinks: true
-  ShowBreadCrumbs: true
+  ShowBreadCrumbs: false
   ShowCodeCopyButtons: false
-  ShowWordCount: true
+  ShowWordCount: false
   ShowRssButtonInSectionTermList: true
   UseHugoToc: true
   disableSpecial1stPost: false
@@ -98,9 +98,9 @@ params:
     hiddenInSingle: true # hide on single page
 
   editPost:
-    URL: "https://github.com/<path_to_repo>/content"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: true # to append file path to Edit link
+    URL: "/suggereix-canvis"
+    Text: "Suggereix Canvis" # edit text
+    appendFilePath: false # don't append file path since we're using a custom page
 
   # for search
   # https://fusejs.io/api/options.html
@@ -127,6 +127,10 @@ menu:
       name: Posts
       url: /posts/
       weight: 25
+    - identifier: suggereix-canvis
+      name: Suggereix Canvis
+      url: /suggereix-canvis/
+      weight: 26
     - identifier: example
       name: Web SUAMO
       url: https://www.suamontinyent.com/
