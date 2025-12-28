@@ -1,0 +1,93 @@
+/* Discreet Button Styling for Post Lists */
+
+/* Override bright buttons in post navigation */
+.pagination a,
+.pagination .current,
+.post-nav a {
+    background: transparent !important;
+    color: var(--brand-golden) !important;
+    border: 1px solid rgba(198, 179, 0, 0.5) !important;
+    padding: 0.5rem 1rem !important;
+    font-size: 0.85rem !important;
+    font-weight: 400 !important;
+    opacity: 0.8 !important;
+    transition: all 0.3s ease !important;
+}
+
+.pagination a:hover,
+.post-nav a:hover {
+    background: rgba(198, 179, 0, 0.1) !important;
+    opacity: 1 !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.pagination .current {
+    background: rgba(198, 179, 0, 0.15) !important;
+    opacity: 1 !important;
+}
+
+/* Tone down post entry elements */
+.post-entry .entry-header h2 a,
+.post-entry .entry-header h3 a {
+    font-weight: 500 !important;
+    transition: color 0.3s ease !important;
+}
+
+.post-entry .entry-header h2 a:hover,
+.post-entry .entry-header h3 a:hover {
+    color: var(--brand-golden-light) !important;
+    text-decoration: none !important;
+}
+
+/* Make read more links more subtle */
+.entry-footer .read-more {
+    color: var(--brand-golden) !important;
+    font-size: 0.85rem !important;
+    opacity: 0.7 !important;
+    text-decoration: none !important;
+    font-weight: 400 !important;
+}
+
+.entry-footer .read-more:hover {
+    opacity: 1 !important;
+    color: var(--brand-golden-light) !important;
+}
+
+/* Subtle archive navigation */
+.archive-nav a {
+    background: transparent !important;
+    color: var(--brand-golden) !important;
+    border: 1px solid rgba(198, 179, 0, 0.3) !important;
+    padding: 0.4rem 0.8rem !important;
+    font-size: 0.8rem !important;
+    opacity: 0.7 !important;
+    margin: 0 0.2rem !important;
+}
+
+.archive-nav a:hover {
+    background: rgba(198, 179, 0, 0.1) !important;
+    opacity: 1 !important;
+}
+
+/* Remove bright backgrounds from action buttons */
+button,
+.button,
+input[type="submit"] {
+    background: transparent !important;
+    color: var(--brand-golden) !important;
+    border: 1px solid var(--brand-golden) !important;
+    padding: 0.6rem 1.2rem !important;
+    font-size: 0.9rem !important;
+    opacity: 0.8 !important;
+    font-weight: 400 !important;
+}
+
+button:hover,
+.button:hover,
+input[type="submit"]:hover {
+    background: rgba(198, 179, 0, 0.1) !important;
+    opacity: 1 !important;
+    transform: none !important;
+    box-shadow: none !important;
+}

@@ -1,0 +1,79 @@
+{{- define "main" }}
+
+{{/* Professional Hero Banner */}}
+<section class="home-banner">
+    <div class="home-banner-content">
+        {{/* <div class="home-banner-logo">
+            <img src="/images/logo.jpg" alt="{{ .Site.Title }} Logo">
+        </div> */}}
+        <h1>{{ .Site.Title }}</h1>
+        <h2>Preservant el patrimoni musical d'Ontinyent</h2>
+    </div>
+</section>
+
+{{/* Enhanced Home Info Section */}}
+{{- with .Site.Params.homeInfoParams }}
+<article class="home-info">
+    {{- if .Title }}
+    <h1>{{ .Title | markdownify }}</h1>
+    {{- end }}
+    {{- if .Content }}
+    <div class="home-content">
+        {{ .Content | markdownify }}
+    </div>
+    {{- end }}
+    
+    {{/* Quick Statistics or Highlights */}}
+    <div class="home-highlights">
+        <div class="highlight-grid">
+            <div class="highlight-item">
+                <h3>150+</h3>
+                <p>Anys d'història</p>
+            </div>
+            <div class="highlight-item">
+                <h3>500+</h3>
+                <p>Documents digitals</p>
+            </div>
+            <div class="highlight-item">
+                <h3>100+</h3>
+                <p>Fotografies històriques</p>
+            </div>
+        </div>
+    </div>
+</article>
+{{- end }}
+
+{{/* Recent Posts Section */}}
+<section class="recent-posts">
+    <h2>Últimes Entrades</h2>
+    <div class="posts-grid">
+        {{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+        {{- range first 3 $paginator.Pages }}
+        <article class="post-card">
+            {{- $class := "post-entry" }}
+            <div class="{{ $class }}">
+                <header class="entry-header">
+                    <h3>
+                        <a href="{{ .Permalink }}" aria-label="post link to {{ .Title | plainify }}">
+                            {{ .Title }}
+                        </a>
+                    </h3>
+                </header>
+                {{- if (ne (.Param "hideSummary") true) }}
+                <div class="entry-content">
+                    <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+                </div>
+                {{- end }}
+                <footer class="entry-footer">
+                    <time>{{ .Date.Format "2 January 2006" }}</time>
+                </footer>
+            </div>
+        </article>
+        {{- end }}
+    </div>
+    <div class="view-all-posts">
+        <a href="/posts/" class="btn-primary">Veure tots els articles</a>
+    </div>
+</section>
+
+{{- end }}{{/* end main */}}

@@ -73,8 +73,13 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "El Racó Del Arxiu"
-    Content: Blog associat a la Societat Unió Artística Musical D'Ontinyent
+    Title: "El Racó de l'Arxiu"
+    Content: |
+      **Preservant el patrimoni musical d'Ontinyent**
+      
+      Som el centre de documentació de la Societat Unió Artística Musical d'Ontinyent, dedicats a conservar, digitalitzar i compartir més de 150 anys d'història musical. El nostre arxiu conté manuscrits originals, fotografies històriques, programes de concert i instruments que narren l'evolució musical de la nostra comunitat.
+      
+      **Descobreix la nostra col·lecció** • **Explora la història** • **Connecta amb la tradició**
 
   socialIcons:
     - name: tiktok

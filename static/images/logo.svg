@@ -1,0 +1,29 @@
+<svg width="200" height="120" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background circle -->
+    <circle cx="100" cy="60" r="45" fill="#c6b300" opacity="0.1" stroke="#c6b300" stroke-width="2"/>
+    
+    <!-- Musical elements -->
+    <g fill="#c6b300">
+        <!-- Treble clef -->
+        <path d="M75 35 Q70 30 75 40 Q80 45 75 50 Q70 55 75 45 Q85 35 80 60 Q75 70 70 60" stroke="#c6b300" stroke-width="1.5" fill="none"/>
+        
+        <!-- Musical notes -->
+        <circle cx="95" cy="45" r="3"/>
+        <rect x="97" y="30" width="2" height="15"/>
+        
+        <circle cx="110" cy="50" r="3"/>
+        <rect x="112" y="35" width="2" height="15"/>
+        
+        <circle cx="125" cy="40" r="3"/>
+        <rect x="127" y="25" width="2" height="15"/>
+        
+        <!-- Archive/book symbol -->
+        <rect x="85" y="70" width="30" height="20" fill="none" stroke="#c6b300" stroke-width="2"/>
+        <line x1="90" y1="75" x2="110" y2="75" stroke="#c6b300" stroke-width="1"/>
+        <line x1="90" y1="80" x2="110" y2="80" stroke="#c6b300" stroke-width="1"/>
+        <line x1="90" y1="85" x2="105" y2="85" stroke="#c6b300" stroke-width="1"/>
+    </g>
+    
+    <!-- Title text -->
+    <text x="100" y="105" font-family="serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#c6b300">El Racó de l'Arxiu</text>
+</svg>

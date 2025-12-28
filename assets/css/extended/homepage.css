@@ -1,0 +1,293 @@
+/* Homepage Hero Banner Styling - Full Width */
+.home-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/images/mainbanner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 8rem 0;
+    margin: 0 0 3rem 0;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    width: 100vw;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/images/banner-pattern.svg') repeat;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.home-banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.home-banner h1 {
+    font-size: 3.5rem;
+    color: var(--brand-light-gray);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.home-banner h2 {
+    font-size: 1.4rem;
+    color: var(--brand-light-gray);
+    margin-bottom: 2rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.home-banner-logo {
+    margin-bottom: 2rem;
+}
+
+.home-banner-logo img {
+    max-height: 120px;
+    width: auto;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+/* Professional Card Layout for Home Info */
+.home-info {
+    background: rgba(198, 179, 0, 0.1);
+    border: 2px solid var(--brand-golden);
+    border-radius: 16px;
+    padding: 3rem;
+    margin: 2rem 0;
+    box-shadow: 0 8px 32px rgba(198, 179, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.home-info h1 {
+    color: var(--brand-golden);
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.home-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--brand-light-gray);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Statistics/Highlights Section */
+.home-highlights {
+    margin-top: 3rem;
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.highlight-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(198, 179, 0, 0.1);
+    border-radius: 12px;
+    border: 1px solid var(--brand-golden);
+}
+
+.highlight-item h3 {
+    font-size: 2.5rem;
+    color: var(--brand-golden);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.highlight-item p {
+    color: var(--brand-light-gray);
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Recent Posts Section */
+.recent-posts {
+    margin: 4rem 0;
+}
+
+.recent-posts h2 {
+    color: var(--brand-golden);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.post-card {
+    background: rgba(198, 179, 0, 0.05);
+    border: 1px solid var(--brand-golden);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(198, 179, 0, 0.2);
+}
+
+.post-entry {
+    padding: 2rem;
+}
+
+.post-card .entry-header h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.3rem;
+    line-height: 1.4;
+}
+
+.post-card .entry-header h3 a {
+    color: var(--brand-golden);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.post-card .entry-header h3 a:hover {
+    color: var(--brand-golden-light);
+}
+
+.post-card .entry-content p {
+    color: var(--brand-light-gray);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.post-card .entry-footer time {
+    color: var(--brand-golden);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.view-all-posts {
+    text-align: center;
+}
+
+.btn-primary {
+    background: transparent;
+    color: var(--brand-golden);
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--brand-golden);
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    opacity: 0.8;
+}
+
+.btn-primary:hover {
+    background: rgba(198, 179, 0, 0.1);
+    color: var(--brand-golden-light);
+    transform: none;
+    box-shadow: none;
+    opacity: 1;
+}
+
+/* Enhanced Social Icons */
+.social_icons {
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 2rem;
+}
+
+.social_icons a {
+    background: transparent;
+    color: var(--brand-golden);
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--brand-golden);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.social_icons a:hover {
+    background: rgba(198, 179, 0, 0.1);
+    color: var(--brand-golden-light);
+    transform: none;
+    box-shadow: none;
+    opacity: 1;
+}
+
+/* Footer Styling - Minimal */
+.main footer {
+    background: transparent;
+    color: var(--content);
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 2rem;
+    border: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-banner {
+        padding: 6rem 0;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+    }
+    
+    .home-banner-content {
+        padding: 0 1rem;
+    }
+    
+    .home-banner h1 {
+        font-size: 2.5rem;
+    }
+    
+    .home-banner h2 {
+        font-size: 1.1rem;
+    }
+    
+    .home-info {
+        padding: 2rem;
+        margin: 1rem;
+    }
+    
+    .home-info h1 {
+        font-size: 2.2rem;
+    }
+    
+    .highlight-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -165,10 +165,10 @@ code {
     border-radius: 3px;
 }
 
-/* Footer with brand colors */
+/* Footer with subtle styling */
 .footer {
-    border-top: 2px solid var(--brand-golden);
-    background: var(--theme);
+    border-top: none;
+    background: transparent;
     color: var(--content);
 }
 

@@ -1,0 +1,13 @@
+<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <pattern id="music-pattern" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+            <circle cx="30" cy="15" r="3" fill="currentColor" opacity="0.3"/>
+            <rect x="32" y="15" width="2" height="20" fill="currentColor" opacity="0.3"/>
+            <circle cx="15" cy="45" r="3" fill="currentColor" opacity="0.3"/>
+            <rect x="17" y="25" width="2" height="20" fill="currentColor" opacity="0.3"/>
+            <circle cx="45" cy="30" r="3" fill="currentColor" opacity="0.3"/>
+            <rect x="47" y="30" width="2" height="15" fill="currentColor" opacity="0.3"/>
+        </pattern>
+    </defs>
+    <rect width="60" height="60" fill="url(#music-pattern)"/>
+</svg>
