@@ -1,6 +1,6 @@
 
 baseURL: "https://elracodelarxiu.pages.dev"
-title: El Racó Del Arxiu
+title: El Racó De l'Arxiu
 theme: PaperMod
 defaultContentLanguage: ca
 languageCode: ca
@@ -16,9 +16,9 @@ minify:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: El Racó Del Arxiu
-  description: "El Racó Del Arxiu description"
-  keywords: [Blog, Portfolio, PaperMod]
+  title: El Racó De l'Arxiu
+  description: "El Racó De l'Arxiu"
+  keywords: [Blog, Portfolio]
   author: Me
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
@@ -41,6 +41,7 @@ params:
   hideSummary: false
   showtoc: false
   tocopen: false
+  hideAuthor: true
 
   assets:
     # disableHLJS: true # to disable highlight.js
@@ -120,14 +121,6 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: història
-      name: Història
-      url: /tags/història/
-      weight: 15
-    - identifier: instagram-reels
-      name: Instagram Reels
-      url: /tags/instagram-reels/
-      weight: 18
     - identifier: posts
       name: Posts
       url: /posts/
@@ -140,11 +133,10 @@ menu:
       name: Web SUAMO
       url: https://www.suamontinyent.com/
       weight: 30
-# Add About page to menu
     - identifier: about
       name: About
       url: /about/
-      weight: 21
+      weight: 28
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
