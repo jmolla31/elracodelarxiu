@@ -138,23 +138,42 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
+    grid-auto-rows: 1fr; /* ensure equal-height rows */
 }
 
 .post-card {
-    background: rgba(198, 179, 0, 0.05);
-    border: 1px solid var(--brand-golden);
+    display: flex;
+    background: var(--entry); /* single-color card */
+    border: none; /* remove border strip */
     border-radius: 12px;
     overflow: hidden;
-    transition: all 0.3s ease;
+    position: relative; /* allow stretched link overlay */
+}
+.post-card .entry-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .post-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(198, 179, 0, 0.2);
+    transform: none; /* no hover shift */
+    box-shadow: none; /* no hover shadow */
 }
 
 .post-entry {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
     padding: 2rem;
+}
+
+/* override global left border stripe on post entries inside home cards */
+.post-card .post-entry {
+    border-left: none;
+    margin-left: 0;
+    padding-left: 2rem; /* keep spacing consistent */
 }
 
 .post-card .entry-header h3 {
@@ -184,6 +203,11 @@
     color: var(--brand-golden);
     font-size: 0.9rem;
     opacity: 0.8;
+}
+
+/* pin the date/footer to bottom for consistent alignment */
+.post-card .entry-footer {
+    margin-top: auto;
 }
 
 .view-all-posts {

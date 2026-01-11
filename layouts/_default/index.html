@@ -73,6 +73,7 @@
                     <time>{{ .Date.Format "2 January 2006" }}</time>
                 </footer>
             </div>
+            <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
         </article>
         {{- end }}
     </div>
