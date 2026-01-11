@@ -83,7 +83,7 @@ falangista, amb el vistiplau de l'alcalde franquista Luis Delgado de Molina.
 
 ## Llegat i Continuïtat
 
-La Unió Artística Musical d'Ontinyent ha perdurat des de l'11 de juliol de 1946 fins avui. És la
+La Unió Artística Musical d'Ontinyent ha perdurat des del 10 de juliol de 1946 fins avui. És la
 formació musical que més temps ha perviscut, amb una base social sòlida que ha reforçat la seva
 longevitat. El nom prové de la unió de les bandes constituïdes per separat durant els anys 1910 i 1920.
 Malgrat les rivalitats, la fusió es va produir.
@@ -101,30 +101,34 @@ social. La bandera de "La Artística" es recuperà el 1999, mentre que la de "La
 | Primeries del segle XIX | Banda de la Aurora | ? |
 | Primeries del segle XIX | Banda de San Carlos | ? |
 | Meitats del segle XIX | Banda sense nom | Francisco de Paula Bonastre Oltra |
-| 1873 < | Banda Municipal | Rafael Galiana |
-| Anys 1890 | | Enrique Casanova Calatayud |
-| 1896 | La Lira del Clariano o Lira Onteniense | Enrique Casanova Calatayud |
-| 1906 | La Lira del Clariano | Vicente Soler Brotons |
-| 1913 - 1915 | La Lira del Clariano | Rafael Nadal Valls |
+| 1873 < | Banda Municipal | Rafael Galiana Cantavella |
+| > 1896 | | Enrique Casanova Casanova |
+| 1896 - 1906 | La Lira del Clariano o Lira Onteniense | |
+| 1906 - 1913 | | Vicente Soler Brotons |
+| 1913 - 1915 | | Rafael Nadal Valls |
 | 1911 - 1915 | Banda de música Nueva | Ladislao Esteve Montes |
-| 1915 - 1916 | Unión Musical | Daniel Silvaje Peralta |
-| | Banda La Artística | |
+| 1915 - ? | Unión Musical (Lira i Nueva) | Daniel Silvaje Peralta |
+| ? | | Vicente Gil Gandía |
+| 1915 - 1927 | Banda La Artística | Rafael Nadal Valls |
+| 1927 - 1930 | | Joaquín Morales Gisbert |
 | 1931 - 1932 | Banda municipal (època republicana) | Daniel Silvaje Peralta |
-| | Banda FET y de las JONS | Vicente Soler Brotons |
-| | | Vicente Gil Gandía |
-| | | Miguel Asensi Martín |
-| | | Alfredo Varona Navarro |
-| 1946 | Societat Unió Artística Musical d'Ontinyent | Rosendo Albiñana Lorente |
-| | | Ramón Corell Saurí |
-| | | José Mir |
-| 1950 - 1987 | | José María Ferrero Pastor |
-| 1987 - 2000 | | Daniel Ferrero Silvaje |
+| 1939 | Banda FET y de las JONS | Vicente Soler Brotons |
+| 1939? - 1943 | | Vicente Gil Gandía |
+| 1943 - 1945 | | Miguel Asensi Martín |
+| 1945 - 1946 | | Alfredo Varona Navarro |
+| 1946 - 1947 | Societat Unió Artística Musical d'Ontinyent | |
+| 1947 - 1948 | | Rosendo Albiñana Lorente |
+| 1948 - 1949 (fins setembre) | | Ramón Corell Saurí |
+| 1949 - 1950 (fins abril?) | | José Mir |
+| 1950 - 1987 (fins juliol) | | José María Ferrero Pastor |
+| 1987 (des de juliol) - 2000 | | Daniel Ferrero Silvaje |
 | 2001 (gener i febrer) | | Juan Jesús Barberá Fontana (interí) |
 | 2001 (març a novembre) | | Pilar Vanyó Bacete |
 | 2002 (gener i febrer) | | Juan Jesús Barberá Fontana (interí) |
 | 2002 (des de març) - 2006 | | Francisco José Sánchez Roca |
 | 2007 - 2009 (fins juliol) | | Ángel Crespo García |
-| 2009 (des de juliol) - 2017 (fins octubre) | | José Francisco Mira Marín |
+| 2009 (juliol i agost) | | Juan Jesús Barberá Fontana (interí) |
+| 2009 (des de setembre) - 2017 (fins octubre) | | José Francisco Mira Marín |
 | 2017 (des d'octubre) - 2018 | | Juan Jesús Barberá Fontana |
 | 2019 - 2025 (fins abril) | | Ramon Garcia i Soler |
 | 2025 (des d'abril) - | | José Miguel Fayos Jordán |
