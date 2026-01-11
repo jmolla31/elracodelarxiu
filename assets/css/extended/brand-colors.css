@@ -267,3 +267,10 @@ blockquote {
 .profile .profile_inner .social-icons a:hover {
     color: var(--brand-golden);
 }
+
+/* Justify paragraphs in blog posts without affecting headings/code */
+.post-single .post-content p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+}
