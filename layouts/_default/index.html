@@ -61,7 +61,12 @@
                 </header>
                 {{- if (ne (.Param "hideSummary") true) }}
                 <div class="entry-content">
+                    {{- $desc := .Description -}}
+                    {{- if $desc -}}
+                    <p>{{ $desc | plainify | htmlUnescape }}</p>
+                    {{- else -}}
                     <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+                    {{- end -}}
                 </div>
                 {{- end }}
                 <footer class="entry-footer">

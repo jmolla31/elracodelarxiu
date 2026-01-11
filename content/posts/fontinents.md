@@ -5,7 +5,7 @@ draft: false
 tags: ["història", "música festera", "composició"]
 categories: ["Descobriments"]
 author: "El Racó de l'Arxiu"
-description: "La història darrere del pasdoble Fontinens de Camilo Pérez Monllor dedicat a Ontinyent"
+description: "Camilo Pérez Monllor dedica Fontinens a Ontinyent: marxa-pasdoble inspirada en les fonts, el canvi industrial i la pau religiosa; retrat dels jardins franciscans i del caràcter històric de la ciutat."
 ---
 
 ## Introducció
