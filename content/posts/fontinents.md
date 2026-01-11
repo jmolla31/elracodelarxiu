@@ -1,0 +1,71 @@
+---
+title: "Fontinens: Un Homenatge Musical d'Alcoi a Ontinyent"
+date: 2026-01-11T12:00:00+01:00
+draft: false
+tags: ["història", "música festera", "composició"]
+categories: ["Descobriments"]
+author: "El Racó de l'Arxiu"
+description: "La història darrere del pasdoble Fontinens de Camilo Pérez Monllor dedicat a Ontinyent"
+---
+
+## Introducció
+
+Fontinens és una composició peculiar, destaca dins del repertori morocristià com una marxa-pasdoble, caracteritzada per diversos motius i amb una temàtica peculiar que fonamenta la història de la peça. Tot i escoltar-se poc, segueix sent una d'aquelles primeres músiques que caracteritzaren la festa, especialment a Alcoi i Ontinyent, municipi al qual es dedica esta obra. Però… Què hi ha darrere de "Fontinens"? Què porta a un alcoià a fer una espècie de poema simfònic sobre Ontinyent?
+
+## El Compositor i les Seves Connexions amb Ontinyent
+
+La música dedicada a la nostra ciutat s'ha estés durant moltes dècades per part de músics locals amb eixa intenció de retre-li homenatge de diverses formes. Nogensmenys l'atractiu d'Ontinyent ha arribat a inspirar a altres persones forànies per a fer música i eixe és el cas de l'alcoià Camilo Pérez Monllor (1852 – 1917). El que porta al compositor a fer un pasdoble anomenat "Fontinens" implica diverses raons, però cal reconèixer el seu vincle amb la banda contemporània ontinyentina "La Lira del Clariano" de Vicente Soler i amb el convent de pares franciscans que ja portava assentat al poble molts anys. Dit convent veuria la possible estrena d'aquest pasdoble l'abril de 1910 encara que s'haguera signat el 1909.
+
+### La Biografia de Pérez Monllor
+
+La vida de Pérez Monllor passa per molts punts del sud valencià i el nord alacantí, tot i que mai va abandonar del tot la seua *patria chica*. Per exemple, va arribar a estar a Villena dirigint la "Juventud Musical Villenense" i la Banda Municipal i, ja després, al nostre municipi gràcies a la relació que guardava amb alguns músics com és el cas de Daniel Silvaje Peralta de qui va ser mestre a la Banda del regiment militar d'Alcoi. El propi Silvaje fou membre de la Lira, cosa que podria explicar l'estreta relació de Pérez Monllor però també les dedicatòries que feia el compositor a les localitats industrials que tenien alguna relació amb Alcoi.
+
+Altre fet podria ser que La Lira era prou coneguda a la ciutat dels Ponts, destaca especialment la seua interpretació sota la batuta de Vicente Soler de "El llanto de Boabdil" del referit Camilo. Però tornant a l'anterior, altre fet que destaca l'estil de Camilo Pérez és la preocupació que tenia pels esdeveniments que l'envoltaven, la història sembla ser una bona font d'inspiració per aquest. Açò es pot comprovar a pasdobles coneguts com Krouger i El Transvaal dedicats a les Guerres Bòers l'any 1900. El cas de Fontinens vindrà relacionat a la història suposada d'Ontinyent, acabant amb una inspiració dels jardins del convent ontinyentí.
+
+## La Inspiració Històrica: Les Anotacions del Manuscrit
+
+Els manuscrits de Fontinens inclouen les següents anotacions sobre el motiu de l'obra:
+
+### Historia de Valencia (Escolano, tomo 2o página 552)
+
+> *Fontinente: ciudad fundada por los romanos y que le dieron este nombre atendiendo a que en su campo brotan millares de fuentes. En sus primitivos tiempos, tuvo gran comercio y fábrica de moneda, siendo una de las poblaciones más ricas. Ha sido valiente: y lo demuestra, el haber derrotado al ejército de Castilla, cuando le puso el cerco. Por lo que obtuvieron grandes privilegios del rey D. Pedro IV de Aragón. Realizó grandes batallas contra el poder de los moros y fue rescatada por el rey D. Jaime, por lo que obtuvo grandes mercedes.*
+
+> *El Papa Pío II, la distinguió por su carácter religioso.*
+
+> *Con la implantación de los ferrocarriles sufrió esta población un gran contratiempo en su comercio y tuvo que cambiar seguidamente y recurrir a toda clase de fabricación (pues debido a no poseer vías férreas, perdiose su preponderancia ), las cuales en la actualidad son su mejor renombre. En esta población puramente religiosa, y en sus conventos reciben educación esperada todos cuantos desean serle provechosa a nuestra madre España.*
+
+### Estructura Musical de l'Obra
+
+> *Descripción de la marcha Fontinens: No 1: Dominación Romana y hallazgo de sus innumerables fuentes. No 2: Cambio de Negocios y nuevos procedimientos de fabricación. No 3 (Trio): La paz en la religión (El huerto del convento de P.P. Franciscanos)*
+
+## Interpretació Musical i Significat
+
+És a dir, Camilo Pérez Monllor s'inspira en la història d'Ontinyent que va escriure l'historiador Gaspar Escolano (1560 – 1619) i en altres elements cridaners, dividint el pasdoble en tres parts principals:
+
+### Primera Part: L'Època Romana
+
+La primera part parla sobre l'ocupació romana de Fontinens/Ontinyent representant un element característic nostre que es troba fins i tot a l'escut: les fonts. Que brollen les aigües és l'element simbòlic més clar del nostre poble, existeixen de fet conflictes per la seua gestió des de l'època romana. No obstant, que Ontinyent tinga un origen romà està cada vegada més desestimat, inclús que Ontinyent vinga de Fontinens. S'ha arribat a aclarir que Ontinyent provindria de "Unctinianus" i aquest de Unctinu, que respondria a un sobrenom d'un personatge d'època visigòtica.
+
+### Segona Part: La Transformació Industrial
+
+La segona part fa referència als canvis econòmics que va viure el poble, així el pasdoble marca un nou tema on l'autor intenta plasmar l'arribada de la indústria i el ferrocarril al poble. Podríem dir que Pérez Monllor segueix fent referència a tot allò que va viure, com és l'expansió industrial o la ferroviària.
+
+### Tercera Part: La Pau Religiosa
+
+La tercera part, pràcticament el trio de la marxa, canvia a una mena de representació del que el va inspirar a compondre l'obra, és a dir, els jardins del comentat convent de franciscans. Per fer-ho, acaba combinant la importància religiosa a Ontinyent i el lloc on va tindre certa relació al poble. Destaca sobretot el *solo* de flautí i l'absència d'un fort final característic als pasdobles, inclús dins del repertori del compositor.
+
+## Presència Actual en el Repertori Fester
+
+Actualment Fontinens segueix estant present al repertori de música festera, tot i que amb molta menys freqüència. A Alcoi encara es manté vigent dins dels programes de concerts o inclús a actes de les festes morocristianes com la Glòria o les dianes, així la Filà Muntanyesos va fer la tercera arrancada a la diana de l'any 2019 amb aquest pasdoble. 
+
+A Ontinyent, sobretot a la Unió Artística Musical, sol interpretar-se de forma freqüent en concerts però també en actes de carrer més formals com l'entrada de bandes l'any 2025 o l'entrada de bandes de les festes de Sant Blai a Alacant l'any 2019. Cal afegir que també ha rebut tracte dins de la discografia festera, tant a l'àlbum gravat per la UAM d'Ontinyent l'any 2000 com el gravat per la "Nova" d'Alcoi "Ja Baixen 27".
+
+## Bibliografia
+
+Ferrando Morales, À. L. (2010). El paper de la burgesia industrial alcoiana en l'aparició del nou repertori musical per a la festa de Moros i Cristians. En *La societat industrial al País Valencià* (pp. 201-221). CAEHA.
+
+Ferrando Morales, J. J. (sense data). *Camilo Pérez Laporta: apunt biogràfic*.
+
+Pérez-Jorge, V. (Ofm). (1979). *La música en Ontinyent*. Caixa d'estalvis d'Ontinyent.
+
+Soler Molina, A. (2023). *ELS NOMS DELS POBLES VALENCIANS, ORIGEN I SIGNIFICAT*. Terra Blanca Edicions.
