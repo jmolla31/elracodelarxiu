@@ -13,6 +13,12 @@ Avoid use of emojis, slang, or overly casual language. Maintain a consistent ton
 
 For bibliographic references, ensure that all sources are properly cited in a standard format (e.g., APA, MLA). Use an unordered list for references at the end of the post.
 
+Each post should have a table of contents, use appropriate headings and subheadings, and include images captions where applicable.
+
+If the original document links to images, download these images to the static/images directory and update the markdown to reference these local images.
+
+Each post should have a description attribute of around 150 to 200 characters summarizing the content of the post.
+
 Use proper styling for quotes, headings, subheadings, and code snippets where applicable. Avoid individual text lines that are too
 long; aim for around 120 characters per line.
 
