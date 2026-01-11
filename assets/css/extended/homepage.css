@@ -62,13 +62,13 @@
 
 /* Professional Card Layout for Home Info */
 .home-info {
-    background: rgba(198, 179, 0, 0.1);
-    border: 2px solid var(--brand-golden);
+    background: var(--entry);
+    border: 1px solid var(--border);
     border-radius: 16px;
     padding: 3rem;
     margin: 2rem 0;
-    box-shadow: 0 8px 32px rgba(198, 179, 0, 0.2);
-    backdrop-filter: blur(10px);
+    box-shadow: none;
+    backdrop-filter: none;
 }
 
 .home-info h1 {
