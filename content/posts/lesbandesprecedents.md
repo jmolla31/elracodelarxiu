@@ -6,6 +6,8 @@ tags: ["història", "banda simfònica"]
 categories: ["Història"]
 author: "El Racó de l'Arxiu"
 description: "Panoràmica històrica de les bandes d’Ontinyent: dels primers conjunts de dolçaines i les rivalitats del segle XIX fins a la fusió que originà la Unió Artística Musical i el llegat que perdura."
+ShowToc: true
+TocOpen: true
 ---
 
 ## Introducció
