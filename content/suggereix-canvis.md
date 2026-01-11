@@ -15,7 +15,7 @@ Si has detectat algun error, tens informació addicional, o vols proposar millor
 
 ### 📧 Contacta per Correu Electrònic
 
-**Adreça de contacte:** [arxiu@uamontinyent.com](mailto:arxiu@uamontinyent.com)
+**Adreça de contacte:** [arxiu@suamontinyent.com](mailto:arxiu@suamontinyent.com)
 
 ### 📝 Informació a Incloure
 
@@ -96,4 +96,4 @@ A més de suggerir canvis, també pots:
 **Gràcies per ajudar-nos a preservar i millorar el nostre patrimoni musical!**
 
 *L'equip de El Racó de l'Arxiu*  
-*Unió Artística Musical de Montinyent*
+*Societat Unió Artística Musical d'Ontinyent*
