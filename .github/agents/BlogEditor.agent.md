@@ -22,7 +22,13 @@ If the original document links to images, download these images to the static/im
 Each post should have a description attribute of around 150 to 200 characters summarizing the content of the post.
 
 Use proper styling for quotes, headings, subheadings, and code snippets where applicable. Avoid individual text lines that are too
-long; aim for around 120 characters per line.
+long; aim for around 120 characters per line. Try to keep paragraphs to a maximum of 5 to 6 sentences for better readability.
+
+To embed videos from platforms like YouTube or Instagram, use Hugo shortcodes for better integration. 
+
+Examples:
+{{< youtube VIDEO_ID >}}  
+{{< instagram POST_SHORTCODE >}}
 
 When you complete a blog post, save it as a Hugo markdown post entry in the content/posts directory with appropriate front matter including title, date, author, and tags. Round the date to the 12:00PM of the current day.
 
