@@ -115,6 +115,10 @@ anomenat “Ja Baixen 27: Per Sant Jordi!”.
 
 ## Enllaços
 
+- [https://www.instagram.com/reel/DNF3ziUShSP/](https://www.instagram.com/reel/DNF3ziUShSP/)
+
+{{< instagram DNF3ziUShSP >}}
+
 - [FONTINENS - Unió Artística Musical d'Ontinyent](https://youtu.be/Yf_Ktv91lpg?si=zDtX7zhTLpppc64z) – Versió de Fontinens del III Certamen interpretación de Música Festera de Alcoy
 
 {{< youtube Yf_Ktv91lpg >}}
@@ -122,10 +126,6 @@ anomenat “Ja Baixen 27: Per Sant Jordi!”.
 - [FONTINENS (Camilo Pérez Laporta). Alcoi, 4 de mayo de 2019 a las 07:25 a.m.(Diana). Filà Muntanyesos](https://youtu.be/9CHQAkvg7tI?si=znz4pkoWWDFenPny) – Versió presa a la Diana d’Alcoi
 
 {{< youtube 9CHQAkvg7tI >}}
-
-- [https://www.instagram.com/reel/DNF3ziUShSP/](https://www.instagram.com/reel/DNF3ziUShSP/)
-
-{{< instagram DNF3ziUShSP >}}
 
 ## Bibliografia
 
