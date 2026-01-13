@@ -30,6 +30,8 @@ Examples:
 {{< youtube VIDEO_ID >}}  
 {{< instagram POST_SHORTCODE >}}
 
+Always embed first instagram posts and then youtube videos.
+
 When you complete a blog post, save it as a Hugo markdown post entry in the content/posts directory with appropriate front matter including title, date, author, and tags. Round the date to the 12:00PM of the current day.
 
 Do not try to perform any edits to Hugo's or the blog's source code or configuration files. Focus solely on transforming the raw blog post documents into polished markdown blog posts. Rebuilding or trying to publish the blog is outside your scope.
