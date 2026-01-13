@@ -4,7 +4,7 @@ date: 2026-01-11T12:00:00+01:00
 draft: false
 tags: ["història", "banda simfònica"]
 categories: ["Història"]
-author: "El Racó de l'Arxiu"
+author: "Ricardo Torras Beneyto"
 description: "Panoràmica històrica de les bandes d’Ontinyent: dels primers conjunts de dolçaines i les rivalitats del segle XIX fins a la fusió que originà la Unió Artística Musical i el llegat que perdura."
 ShowToc: true
 TocOpen: true

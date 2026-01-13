@@ -4,7 +4,7 @@ date: 2026-01-12T12:00:00+01:00
 draft: false
 tags: ["música festera", "pasdoble", "Ontinyent", "Camilo Pérez Laporta"]
 categories: ["Història"]
-author: "El Racó de l'Arxiu"
+author: "Ricardo Torras Beneyto"
 description: "Anàlisi de 'Fontinens' de Camilo Pérez Laporta: marxa-pasdoble dedicada a Ontinyent, amb inspiració històrica, estructura programàtica i presència al repertori fester d'Alcoi i Ontinyent."
 ShowToc: true
 TocOpen: true
