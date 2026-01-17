@@ -28,6 +28,17 @@ Aquesta prova segueix la tradició del blog de documentar aspectes de la històr
 - GitHub Actions Documentation. GitHub Inc.
 - Hugo Static Site Generator Documentation. The Hugo Authors.
 
+## Resultats Esperats
+
+En finalitzar aquest procés automatitzat, hauríem de veure:
+
+- Un article de blog amb format Hugo correcte
+- Metadades generades automàticament per la intel·ligència artificial
+- Validació completa del contingut (frontmatter, enllaços, imatges)
+- Una Pull Request amb tota la informació necessària per a la revisió
+
 ## Conclusió
 
-Si esteu llegint aquest article en una previsualització de Cloudflare Pages o al lloc web final, vol dir que el sistema automatitzat ha funcionat correctament. Enhorabona!
+Si esteu llegint aquest article en una previsualització de Cloudflare Pages o al lloc web final, vol dir que el sistema automatitzat ha funcionat correctament. El flux complet des de document en brut fins a publicació està operatiu!
+
+Actualitzat per verificar el flux de treball automatitzat.
