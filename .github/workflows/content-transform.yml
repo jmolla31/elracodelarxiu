@@ -1,0 +1,220 @@
+name: Transform Content
+
+on:
+  push:
+    branches-ignore:
+      - master
+    paths:
+      - 'source_docs/**'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  transform:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          
+      - name: Install dependencies
+        run: |
+          pip install requests python-frontmatter pyyaml pillow openai
+          
+      - name: Detect changed source documents
+        id: changed-files
+        run: |
+          git diff --name-only origin/master...HEAD | grep '^source_docs/' > changed_files.txt || true
+          if [ -s changed_files.txt ]; then
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "Changed files:"
+            cat changed_files.txt
+          else
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "No changes in source_docs/"
+          fi
+          
+      - name: Transform blog posts
+        if: steps.changed-files.outputs.has_changes == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python .github/scripts/transform_content.py
+        
+      - name: Validate transformed content
+        if: steps.changed-files.outputs.has_changes == 'true'
+        id: validate
+        continue-on-error: true
+        run: |
+          echo "Running content validation..."
+          python .github/scripts/validate_content.py > /tmp/validation_output.txt 2>&1
+          VALIDATION_EXIT=$?
+          cat /tmp/validation_output.txt
+          echo "validation_exit=$VALIDATION_EXIT" >> $GITHUB_OUTPUT
+          exit $VALIDATION_EXIT
+          
+      - name: Commit transformed content
+        if: steps.changed-files.outputs.has_changes == 'true'
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/posts/ static/images/
+          if git diff --cached --quiet; then
+            echo "has_commits=false" >> $GITHUB_OUTPUT
+            echo "No changes to commit"
+          else
+            git commit -m "🤖 Transform blog content from source_docs"
+            git push
+            echo "has_commits=true" >> $GITHUB_OUTPUT
+          fi
+          
+      - name: Generate transformation summary
+        if: steps.commit.outputs.has_commits == 'true'
+        id: summary
+        run: |
+          echo "Generating summary of transformed posts..."
+          
+          # Get list of new/modified posts
+          POSTS=$(git diff --name-only HEAD~1 HEAD | grep '^content/posts/' || echo "")
+          IMAGES=$(git diff --name-only HEAD~1 HEAD | grep '^static/images/' || echo "")
+          
+          # Count files
+          POST_COUNT=$(echo "$POSTS" | grep -c '.md' || echo "0")
+          IMAGE_COUNT=$(echo "$IMAGES" | wc -l || echo "0")
+          
+          # Create summary
+          SUMMARY="## 🤖 Content Transformation Summary\n\n"
+          SUMMARY+="**Posts created/updated:** $POST_COUNT\n"
+          SUMMARY+="**Images downloaded:** $IMAGE_COUNT\n"
+          
+          # Add validation status
+          if [ "${{ steps.validate.outputs.validation_exit }}" = "0" ]; then
+            SUMMARY+="**Validation:** ✅ Passed\n\n"
+          else
+            SUMMARY+="**Validation:** ⚠️ Issues found (see details below)\n\n"
+          fi
+          
+          if [ -n "$POSTS" ]; then
+            SUMMARY+="### 📝 Posts:\n"
+            for post in $POSTS; do
+              SUMMARY+="- \`$post\`\n"
+            done
+            SUMMARY+="\n"
+          fi
+          
+          # Add validation output if it exists
+          if [ -f /tmp/validation_output.txt ]; then
+            SUMMARY+="### 🔍 Validation Results:\n\n"
+            SUMMARY+="\`\`\`\n"
+            SUMMARY+="$(cat /tmp/validation_output.txt)\n"
+            SUMMARY+="\`\`\`\n\n"
+          fi
+          
+          # Save to file for PR body
+          echo -e "$SUMMARY" > /tmp/pr_summary.txt
+          echo "summary_created=true" >> $GITHUB_OUTPUT
+          
+      - name: Create Pull Request
+        if: steps.commit.outputs.has_commits == 'true'
+        id: create-pr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Read the summary
+          SUMMARY=$(cat /tmp/pr_summary.txt || echo "Content transformed successfully")
+          
+          # Get current branch name
+          BRANCH_NAME="${GITHUB_REF#refs/heads/}"
+          
+          # Construct Cloudflare preview URL
+          # Format: https://BRANCH.PROJECT.pages.dev
+          BRANCH_SLUG=$(echo "$BRANCH_NAME" | sed 's/[^a-zA-Z0-9-]/-/g' | tr '[:upper:]' '[:lower:]')
+          PREVIEW_URL="https://${BRANCH_SLUG}.elracodelarxiu.pages.dev"
+          
+          # Create PR body with checklist
+          PR_BODY="$SUMMARY
+
+---
+
+## 🔍 Preview Deployment
+
+Your Cloudflare Pages preview deployment will be available at:
+
+🔗 **[$PREVIEW_URL]($PREVIEW_URL)**
+
+Wait a few minutes for the build to complete, then click the link to review your changes.
+
+---
+
+## 📋 Review Checklist
+
+Before merging, please verify:
+
+- [ ] **Preview deployed** - Cloudflare build succeeded
+- [ ] **Content accuracy** - Text is properly formatted and preserved
+- [ ] **Images** - All images downloaded and displaying correctly
+- [ ] **Frontmatter** - Title, tags, categories, description are appropriate
+- [ ] **Links** - Internal and external links work correctly
+- [ ] **Hugo shortcodes** - YouTube/Instagram embeds render properly
+- [ ] **Line wrapping** - Text is readable (~120 chars per line)
+- [ ] **Bibliography** - References formatted correctly
+
+## ✅ Next Steps
+
+1. Review the preview deployment above
+2. Check all items in the checklist
+3. If everything looks good, **merge this PR** to publish to production
+4. If changes needed, push updates to this branch and the preview will rebuild
+
+---
+
+*Automated transformation powered by GitHub Actions + LLM*"
+
+          # Create the PR and capture URL
+          PR_URL=$(gh pr create \
+            --title "🚀 Publish: Content from $BRANCH_NAME" \
+            --body "$PR_BODY" \
+            --base master \
+            --head "$BRANCH_NAME" \
+            --label "content,automated" 2>&1 || echo "")
+          
+          if [ -n "$PR_URL" ]; then
+            echo "pr_url=$PR_URL" >> $GITHUB_OUTPUT
+            echo "✅ Pull request created: $PR_URL"
+          else
+            echo "⚠️ PR may already exist or creation failed"
+          fi
+          
+      - name: Post Cloudflare deployment status
+        if: steps.create-pr.outputs.pr_url != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Wait a moment for PR to be fully created
+          sleep 5
+          
+          # Get PR number from URL or find it
+          BRANCH_NAME="${GITHUB_REF#refs/heads/}"
+          PR_NUMBER=$(gh pr list --head "$BRANCH_NAME" --json number --jq '.[0].number' || echo "")
+          
+          if [ -n "$PR_NUMBER" ]; then
+            # Post a comment about Cloudflare deployment
+            gh pr comment $PR_NUMBER --body "🚀 **Deployment Status**
+
+This PR will trigger a Cloudflare Pages preview deployment automatically.
+
+⏳ Build typically takes 1-2 minutes...
+
+Once complete, the preview URL will be accessible. You can also check deployment status in the [Cloudflare Pages dashboard](https://dash.cloudflare.com/).
+
+✨ *Tip: The preview updates automatically if you push more commits to this branch.*"
+          fi
