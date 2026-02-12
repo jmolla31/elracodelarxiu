@@ -41,7 +41,7 @@ params:
   hideSummary: false
   showtoc: false
   tocopen: false
-  hideAuthor: true
+  hideAuthor: false
 
   assets:
     # disableHLJS: true # to disable highlight.js
