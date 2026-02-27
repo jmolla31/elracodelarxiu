@@ -1,17 +1,49 @@
-/* Homepage Hero Banner Styling - Full Width */
+/* Homepage Hero Banner Styling - Fullscreen Background */
 .home-banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/images/mainbanner.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/images/mainbanner.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 8rem 0;
-    margin: 0 0 3rem 0;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
-    width: 100vw;
-    text-align: center;
     position: relative;
     overflow: hidden;
+}
+
+/* Scrollable container for banner content */
+.banner-scroll-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 2;
+    padding: 2rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--brand-golden) rgba(0, 0, 0, 0.3);
+}
+
+.banner-scroll-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.banner-scroll-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.banner-scroll-container::-webkit-scrollbar-thumb {
+    background: var(--brand-golden);
+    border-radius: 4px;
+}
+
+.banner-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: var(--brand-golden-light);
 }
 
 .home-banner::before {
@@ -60,15 +92,17 @@
     filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
 }
 
-/* Professional Card Layout for Home Info */
+/* Professional Card Layout for Home Info - Overlay on Banner */
 .home-info {
-    background: var(--entry);
+    background: rgba(var(--entry-rgb, 28, 28, 30), 0.9);
     border: 1px solid var(--border);
     border-radius: 16px;
     padding: 3rem;
-    margin: 2rem 0;
-    box-shadow: none;
-    backdrop-filter: none;
+    margin: 2rem auto;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    max-width: 800px;
+    width: 90%;
 }
 
 .home-info h1 {
@@ -122,7 +156,9 @@
 
 /* Recent Posts Section */
 .recent-posts {
-    margin: 4rem 0;
+    margin: 2rem auto 4rem;
+    max-width: 1200px;
+    width: 90%;
 }
 
 .recent-posts h2 {
@@ -215,22 +251,23 @@
 }
 
 .btn-primary {
-    background: transparent;
+    background: var(--entry);
     color: var(--brand-golden);
     padding: 0.75rem 1.5rem;
-    border: 1px solid var(--brand-golden);
-    border-radius: 6px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
     text-decoration: none;
     font-weight: 400;
     font-size: 0.9rem;
     transition: all 0.3s ease;
     display: inline-block;
-    opacity: 0.8;
+    opacity: 1;
 }
 
 .btn-primary:hover {
-    background: rgba(198, 179, 0, 0.1);
+    background: var(--entry);
     color: var(--brand-golden-light);
+    border-color: var(--brand-golden);
     transform: none;
     box-shadow: none;
     opacity: 1;
@@ -280,30 +317,28 @@
 /* Responsive Design */
 @media (max-width: 768px) {
     .home-banner {
-        padding: 6rem 0;
+        height: 100vh;
         margin-left: calc(-50vw + 50%);
         margin-right: calc(-50vw + 50%);
+        background-attachment: scroll;
     }
     
-    .home-banner-content {
-        padding: 0 1rem;
-    }
-    
-    .home-banner h1 {
-        font-size: 2.5rem;
-    }
-    
-    .home-banner h2 {
-        font-size: 1.1rem;
+    .banner-scroll-container {
+        padding: 1rem;
     }
     
     .home-info {
         padding: 2rem;
-        margin: 1rem;
+        width: 85%;
+        max-width: none;
     }
     
     .home-info h1 {
         font-size: 2.2rem;
+    }
+    
+    .recent-posts {
+        width: 95%;
     }
     
     .highlight-grid {
