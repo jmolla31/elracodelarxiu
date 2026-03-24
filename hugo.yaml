@@ -134,7 +134,7 @@ menu:
       url: https://www.suamontinyent.com/
       weight: 30
     - identifier: about
-      name: About
+      name: Sobre el projecte
       url: /about/
       weight: 28
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
