@@ -1,0 +1,90 @@
+name: Auto Publish Source Docs
+
+on:
+  push:
+    branches-ignore:
+      - master
+    paths:
+      - source_docs/**
+
+permissions:
+  contents: write
+  pull-requests: write
+  models: read
+
+jobs:
+  process-and-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch master for comparison
+        run: git fetch origin master --depth=1
+
+      - name: Process changed source docs
+        id: process
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          BLOG_EDITOR_PROVIDER: github
+          BLOG_EDITOR_MODEL: ${{ vars.BLOG_EDITOR_MODEL }}
+          BLOG_EDITOR_API_URL: ${{ vars.BLOG_EDITOR_API_URL }}
+          BLOG_EDITOR_BASE_REF: origin/master
+        run: |
+          if [ -z "${BLOG_EDITOR_MODEL}" ]; then
+            export BLOG_EDITOR_MODEL="openai/gpt-4.1-mini"
+          fi
+
+          if [ -z "${BLOG_EDITOR_API_URL}" ]; then
+            export BLOG_EDITOR_API_URL="https://models.inference.ai.azure.com/chat/completions"
+          fi
+
+          python scripts/process_source_docs.py
+
+      - name: Commit generated posts and report
+        id: commit
+        run: |
+          if git diff --quiet; then
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/posts .github/tmp
+          git commit -m "chore: format source docs into Hugo posts"
+          git push origin "${GITHUB_REF_NAME}"
+          echo "has_changes=true" >> "$GITHUB_OUTPUT"
+
+      - name: Create or update PR to master
+        if: steps.commit.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          BRANCH="${GITHUB_REF_NAME}"
+          REPORT_PATH=".github/tmp/blog-editor-report.md"
+
+          PR_NUMBER=$(gh pr list \
+            --head "${BRANCH}" \
+            --base master \
+            --state open \
+            --json number \
+            --jq '.[0].number')
+
+          if [ -z "${PR_NUMBER}" ]; then
+            gh pr create \
+              --base master \
+              --head "${BRANCH}" \
+              --title "Automated post publish from source_docs (${BRANCH})" \
+              --body-file "${REPORT_PATH}"
+          else
+            gh pr edit "${PR_NUMBER}" --body-file "${REPORT_PATH}"
+          fi
