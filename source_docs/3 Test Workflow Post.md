@@ -41,4 +41,4 @@ En finalitzar aquest procés automatitzat, hauríem de veure:
 
 Si esteu llegint aquest article en una previsualització de Cloudflare Pages o al lloc web final, vol dir que el sistema automatitzat ha funcionat correctament. El flux complet des de document en brut fins a publicació està operatiu!
 
-Actualitzat per verificar el flux de treball automatitzat.
+Actualitzat per verificar el flux de treball automatitzat.as
