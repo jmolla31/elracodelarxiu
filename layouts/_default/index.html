@@ -7,7 +7,7 @@
         {{- with .Site.Params.homeInfoParams }}
         <article class="home-info">
             {{- if .Title }}
-            <h1>{{ .Title | markdownify }}</h1>
+            <h1><img src="/images/favicon.ico" alt="{{ .Title }}" style="height: 120px; display: block; margin: 0 auto;"></h1>
             {{- end }}
             {{- if .Content }}
             <div class="home-content">
