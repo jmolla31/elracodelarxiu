@@ -75,18 +75,9 @@ div[style*="text-align: center"] {
     font-weight: 700;
 }
 
-.header .logo a:hover {
-    color: var(--brand-golden-light);
-}
-
 /* Navigation menu */
 .header .menu a {
     color: var(--content);
-}
-
-.header .menu a:hover {
-    color: var(--brand-golden);
-    background: rgba(198, 179, 0, 0.1);
 }
 
 /* Main content area */

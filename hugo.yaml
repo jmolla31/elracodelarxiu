@@ -126,9 +126,9 @@ menu:
     - identifier: suggereix-canvis
       name: Suggereix Canvis
       url: /suggereix-canvis/
-      weight: 26
+      weight: 28
     - identifier: example
-      name: Web SUAMO
+      name: "Unió Artística Musical d'Ontinyent"
       url: https://www.suamontinyent.com/
       params:
         newtab: true
@@ -136,7 +136,7 @@ menu:
     - identifier: about
       name: Sobre el projecte
       url: /about/
-      weight: 28
+      weight: 26
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
