@@ -197,6 +197,7 @@
 .post-card .post-entry {
     border-left: none;
     margin-left: 0;
+    margin-bottom: 0;
     padding-left: 2rem; /* keep spacing consistent */
 }
 
