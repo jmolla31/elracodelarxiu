@@ -8,6 +8,9 @@ author: "Ricardo Torras Beneyto"
 description: "Estudi de Lo crit de festa de Camilo Pérez Monllor, una obra singular conservada a l’arxiu de la Unió Artística Musical d’Ontinyent entre el pasdoble i la marxa àrab."
 ShowToc: true
 TocOpen: true
+cover:
+  image: "/images/locritdefesta.jpeg"
+  alt: "Portada de Lo crit de festa"
 ---
 
 ## Introducció

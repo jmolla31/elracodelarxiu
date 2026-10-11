@@ -31,7 +31,7 @@
 {{- end }}
 
 {{- if .Content }}
-<div class="post-content">
+<div class="post-content md-content">
   {{- if not (.Param "disableAnchoredHeadings") }}
   {{- partial "anchored_headings.html" .Content -}}
   {{- else }}{{ .Content }}{{ end }}
@@ -81,12 +81,12 @@
   </header>
   {{- if (ne (.Param "hideSummary") true) }}
   <div class="entry-content">
-    {{- $desc := .Description -}}
-    {{- if $desc -}}
-    <p>{{ $desc | plainify | htmlUnescape }}</p>
-    {{- else -}}
+    {{- /* site override: prefer the front matter description over the auto summary */}}
+    {{- with .Description }}
+    <p>{{ . | plainify | htmlUnescape }}</p>
+    {{- else }}
     <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
-    {{- end -}}
+    {{- end }}
   </div>
   {{- end }}
   {{- if not (.Param "hideMeta") }}
@@ -94,7 +94,7 @@
     {{- partial "post_meta.html" . -}}
   </footer>
   {{- end }}
-  <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+  <a class="entry-link" aria-label="Llegeix {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
 </article>
 {{- end }}
 

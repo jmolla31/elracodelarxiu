@@ -2,60 +2,58 @@
 
 {{/* Professional Hero Banner */}}
 <section class="home-banner">
-    <div class="banner-scroll-container">
-        {{/* Enhanced Home Info Section */}}
-        {{- with .Site.Params.homeInfoParams }}
-        <article class="home-info">
-            {{- if .Title }}
-            <h1><img src="/images/favicon.ico" alt="{{ .Title }}" style="height: 120px; display: block; margin: 0 auto;"></h1>
-            {{- end }}
-            {{- if .Content }}
-            <div class="home-content">
-                {{ .Content | markdownify }}
-            </div>
-            {{- end }}
-        </article>
+    {{/* Enhanced Home Info Section */}}
+    {{- with .Site.Params.homeInfoParams }}
+    <article class="home-info">
+        {{- if .Title }}
+        <h1><img src="/images/logo.png" alt="{{ .Title }}" width="120" height="120" style="display: block; margin: 0 auto;"></h1>
         {{- end }}
+        {{- if .Content }}
+        <div class="home-content">
+            {{ .Content | markdownify }}
+        </div>
+        {{- end }}
+    </article>
+    {{- end }}
 
-        {{/* Recent Posts Section */}}
-        <section class="recent-posts">
-            <!-- <h2>Últimes Entrades</h2> -->
-            <div class="posts-grid">
-                {{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-                {{- range first 3 $paginator.Pages }}
-                <article class="post-card">
-                    {{- $class := "post-entry" }}
-                    <div class="{{ $class }}">
-                        <header class="entry-header">
-                            <h3>
-                                <a href="{{ .Permalink }}" aria-label="post link to {{ .Title | plainify }}">
-                                    {{ .Title }}
-                                </a>
-                            </h3>
-                        </header>
-                        {{- if (ne (.Param "hideSummary") true) }}
-                        <div class="entry-content">
-                            {{- $desc := .Description -}}
-                            {{- if $desc -}}
-                            <p>{{ $desc | plainify | htmlUnescape }}</p>
-                            {{- else -}}
-                            <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
-                            {{- end -}}
-                        </div>
-                        {{- end }}
-                        <footer class="entry-footer">
-                            <time>{{ .Date.Format "2 January 2006" }}</time>
-                        </footer>
+    {{/* Recent Posts Section */}}
+    <section class="recent-posts">
+        <!-- <h2>Últimes Entrades</h2> -->
+        <div class="posts-grid">
+            {{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+            {{- range first 3 $paginator.Pages }}
+            <article class="post-card">
+                {{- $class := "post-entry" }}
+                <div class="{{ $class }}">
+                    <header class="entry-header">
+                        <h3>
+                            <a href="{{ .Permalink }}" aria-label="Llegeix {{ .Title | plainify }}">
+                                {{ .Title }}
+                            </a>
+                        </h3>
+                    </header>
+                    {{- if (ne (.Param "hideSummary") true) }}
+                    <div class="entry-content">
+                        {{- $desc := .Description -}}
+                        {{- if $desc -}}
+                        <p>{{ $desc | plainify | htmlUnescape }}</p>
+                        {{- else -}}
+                        <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+                        {{- end -}}
                     </div>
-                    <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
-                </article>
-                {{- end }}
-            </div>
-            <div class="view-all-posts">
-                <a href="/posts/" class="btn-primary">Veure tots els articles</a>
-            </div>
-        </section>
-    </div>
+                    {{- end }}
+                    <footer class="entry-footer">
+                        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format (default ":date_long" site.Params.DateFormat) }}</time>
+                    </footer>
+                </div>
+                <a class="entry-link" aria-label="Llegeix {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+            </article>
+            {{- end }}
+        </div>
+        <div class="view-all-posts">
+            <a href="/posts/" class="btn-primary">Veure tots els articles</a>
+        </div>
+    </section>
 </section>
 
 {{- end }}{{/* end main */}}

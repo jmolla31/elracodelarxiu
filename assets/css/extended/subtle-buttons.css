@@ -69,25 +69,3 @@
     background: rgba(198, 179, 0, 0.1) !important;
     opacity: 1 !important;
 }
-
-/* Remove bright backgrounds from action buttons */
-button,
-.button,
-input[type="submit"] {
-    background: transparent !important;
-    color: var(--brand-golden) !important;
-    border: 1px solid var(--brand-golden) !important;
-    padding: 0.6rem 1.2rem !important;
-    font-size: 0.9rem !important;
-    opacity: 0.8 !important;
-    font-weight: 400 !important;
-}
-
-button:hover,
-.button:hover,
-input[type="submit"]:hover {
-    background: rgba(198, 179, 0, 0.1) !important;
-    opacity: 1 !important;
-    transform: none !important;
-    box-shadow: none !important;
-}

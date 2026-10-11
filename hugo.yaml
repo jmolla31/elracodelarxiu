@@ -18,11 +18,9 @@ params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: El Racó De l'Arxiu
   description: "El Racó De l'Arxiu"
-  keywords: [Blog, Portfolio]
-  author: Me
-  # author: ["Me", "You"] # multiple authors
-  images: ["<link or path of image for opengraph, twitter-cards>"]
-  DateFormat: "2 January 2006"
+  keywords: ["arxiu", "història", "música festera", "Unió Artística Musical d'Ontinyent", "Ontinyent"]
+  images: ["/images/mainbanner.jpg"] # default share image; posts override it with cover.image
+  DateFormat: ":date_long" # localised, e.g. "24 de març de 2026"
   defaultTheme: dark # Force dark mode only
   disableThemeToggle: true
 
@@ -41,7 +39,7 @@ params:
   hideSummary: false
   showtoc: false
   tocopen: false
-  hideAuthor: true
+  hideAuthor: false # posts credit their author via front matter
 
   assets:
     # disableHLJS: true # to disable highlight.js
@@ -54,21 +52,6 @@ params:
     text: "Inici"
     icon: /images/favicon.ico
     iconHeight: 35
-
-  # profile-mode
-  profileMode:
-    enabled: false # needs to be explicitly set
-    title: ExampleSite
-    subtitle: "This is subtitle"
-    imageUrl: "<img location>"
-    imageWidth: 120
-    imageHeight: 120
-    imageTitle: my image
-    buttons:
-      - name: Posts
-        url: posts
-      - name: Tags
-        url: tags
 
   # home-info mode
   homeInfoParams:
@@ -88,14 +71,6 @@ params:
     - name: youtube
       url: "https://www.youtube.com/@uamontinyent"
 
-  analytics:
-    google:
-      SiteVerificationTag: "XYZabc"
-    bing:
-      SiteVerificationTag: "XYZabc"
-    yandex:
-      SiteVerificationTag: "XYZabc"
-
   cover:
     hidden: true # hide everywhere but not in structured data
     hiddenInList: true # hide on list pages and home
@@ -106,17 +81,6 @@ params:
     Text: "Suggereix Canvis" # edit text
     appendFilePath: false # don't append file path since we're using a custom page
 
-  # for search
-  # https://fusejs.io/api/options.html
-  fuseOpts:
-    isCaseSensitive: false
-    shouldSort: true
-    location: 0
-    distance: 1000
-    threshold: 0.4
-    minMatchCharLength: 0
-    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
-    keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
     - identifier: posts

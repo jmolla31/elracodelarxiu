@@ -121,18 +121,6 @@ div[style*="text-align: center"] {
     color: var(--brand-golden);
 }
 
-/* Buttons and interactive elements */
-.pagination a {
-    background: var(--brand-golden);
-    color: white;
-    border: 2px solid var(--brand-golden);
-}
-
-.pagination a:hover {
-    background: var(--brand-golden-dark);
-    border-color: var(--brand-golden-dark);
-}
-
 /* Links */
 a {
     color: var(--brand-golden);
